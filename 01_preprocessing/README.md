@@ -1,7 +1,7 @@
 # 🧬 Bulk RNA-seq Pipeline – 01_Preprocessing
 
-[![Conda Environment](https://img.shields.io/badge/env-conda-blue)](https://docs.conda.io/)
-[![Workflow Status](https://img.shields.io/badge/status-active-brightgreen)](#)
+[![Conda Environment](https://img.shields.io/badge/env-conda-blue)](https://docs.conda.io/)  
+[![Workflow Status](https://img.shields.io/badge/status-active-brightgreen)](#)  
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](../LICENSE)
 
 Preprocessing step for paired-end bulk RNA-seq data using `fastqc` and `fastp`.
@@ -23,6 +23,9 @@ cd 01_preprocessing/scripts
 
 # Run the preprocessing pipeline
 bash preprocess_paired.sh
+```
+
+---
 
 ## 📂 Output Directories
 
@@ -30,6 +33,7 @@ bash preprocess_paired.sh
 - `results/fastp_cleaned/` — Trimmed FASTQ files and fastp HTML/JSON reports  
 - `results/fastqc_cleaned/` — FastQC reports for cleaned reads
 
+---
 
 ## 📎 Notes
 
@@ -38,23 +42,26 @@ bash preprocess_paired.sh
   `sampleID_1.fastq` and `sampleID_2.fastq`  
 - The script processes each pair and runs both raw and post-trimming FastQC
 
-
+---
 
 ## 🔧 Dependencies
 
 The following tools are required in the `bulkrnaseq` conda environment:
 
-- `fastqc`
+- `fastqc`  
 - `fastp`
 
 Install using:
 
 ```bash
 conda install -c bioconda fastqc fastp
+```
 
-
+---
 
 ## 📁 Folder Structure
+
+```
 01_preprocessing/
 ├── config.sh                # Configuration (paths and threads)
 ├── README.md                # This file
@@ -64,7 +71,10 @@ conda install -c bioconda fastqc fastp
 │   └── fastqc_cleaned/
 └── scripts/
     └── preprocess_paired.sh # Main script to run
+```
+
+---
 
 ## 📘 License
-This project is licensed under the MIT License. See the LICENSE file for details.
 
+This project is licensed under the MIT License. See the [LICENSE](../LICENSE) file for details.
