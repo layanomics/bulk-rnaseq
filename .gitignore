@@ -1,2 +1,19 @@
-# Ignore raw data
+# Ignore everything in results/
+results/*
+
+# But keep all .html files inside results and subfolders
+!results/**/*.html
+
+# Ignore raw data and references
 data/
+
+# Ignore logs, JSON, and temporary files
+*.json
+*.zip
+*.log
+*.tmp
+
+# Conda and system files
+.env
+*.DS_Store
+.ipynb_checkpoints/
