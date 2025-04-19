@@ -16,11 +16,10 @@ Make sure your Conda environment is activated and all dependencies (e.g., `fastq
 # Activate the environment
 conda activate bulkrnaseq
 
-# Navigate to the preprocessing script
-cd 01_preprocessing/scripts
+#ℹ️ Always run the script from the parent directory (`01_preprocessing/`) so output paths work correctly.
 
 # Run the preprocessing pipeline
-bash preprocess_paired.sh
+bash scripts/preprocess_paired.sh
 ```
 
 ---

@@ -5,7 +5,7 @@ set -euxo pipefail
 
 # Load paths and parameters
 # shellcheck disable=SC1091
-source ../config.sh
+source config.sh
 
 # Create output directories
 mkdir -p "$FASTQC_RAW" "$FASTP_OUT" "$FASTQC_CLEANED"
