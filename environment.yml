@@ -1,0 +1,5 @@
+name: bulkrnaseq
+channels:
+  - https://repo.anaconda.com/pkgs/main
+  - https://repo.anaconda.com/pkgs/r
+prefix: /home/layanomics/miniconda3/envs/bulkrnaseq
