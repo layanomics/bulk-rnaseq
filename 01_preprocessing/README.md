@@ -1,7 +1,6 @@
 # 🧬 Bulk RNA-seq Pipeline – 01_Preprocessing
 
 [![Conda Environment](https://img.shields.io/badge/env-conda-blue)](https://docs.conda.io/)  
-[![Workflow Status](https://img.shields.io/badge/status-active-brightgreen)](#)  
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](../LICENSE)
 
 Preprocessing step for paired-end bulk RNA-seq data using `fastqc` and `fastp`.
