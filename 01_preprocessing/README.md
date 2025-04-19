@@ -40,8 +40,9 @@ conda install -c bioconda multiqc
 Then run the script:
 
 ```bash
-cd 01_preprocessing/scripts
-bash run_multiqc.sh
+#ℹ️ Always run the script from the parent directory (`01_preprocessing/`) so output paths work correctly.
+bash scripts/run_multiqc.sh
+
 ```
 
 This will scan all outputs in `results/` and create a summary report.
