@@ -1,19 +1,18 @@
-# Ignore everything in results/
-results/*
+# Ignore all results except HTML reports from preprocessing
+01_preprocessing/results/*
+!01_preprocessing/results/**/*.html
 
-# But keep all .html files inside results and subfolders
-!results/**/*.html
-
-# Ignore raw data and references
+# Ignore raw and reference data
 data/
 
-# Ignore logs, JSON, and temporary files
+# Ignore logs, JSON, fastq, zip, and temp files
 *.json
 *.zip
+*.fastq
 *.log
 *.tmp
 
-# Conda and system files
+# System and editor files
 .env
 *.DS_Store
 .ipynb_checkpoints/
