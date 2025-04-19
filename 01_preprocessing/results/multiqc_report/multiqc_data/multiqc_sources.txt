@@ -1,0 +1,4 @@
+Module	Section	Sample Name	Source
+fastp	all_sections	SRR031714_1	/home/layanomics/bulk-rnaseq/01_preprocessing/results/fastp_cleaned/SRR031714_fastp.json
+FastQC	all_sections	SRR031714_2	/home/layanomics/bulk-rnaseq/01_preprocessing/results/fastqc_cleaned/SRR031714_2_trimmed_fastqc.zip
+FastQC	all_sections	SRR031714_1	/home/layanomics/bulk-rnaseq/01_preprocessing/results/fastqc_cleaned/SRR031714_1_trimmed_fastqc.zip
