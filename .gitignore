@@ -18,11 +18,8 @@ data/
 02_alignment/results/star_index/
 
 # === Quantification Outputs ===
-03_quantification/results/*.txt
-03_quantification/results/*.summary
-03_quantification/results/*.mod.txt
-03_quantification/results/*.counts
-03_quantification/results/*.csv
+03_quantification/results/*
+!03_quantification/results/FeatureCounts_Mod.txt # ✅ allow this one file
 
 # Keep empty result folders tracked
 !01_preprocessing/results/.gitkeep
