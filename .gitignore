@@ -23,7 +23,7 @@ data/
 
 # === Quantification Outputs ===
 03_quantification/results/*
-!03_quantification/results/FeatureCounts_Mod.txt
+!03_quantification/results/gene_counts.txt
 !03_quantification/results/.gitkeep
 
 # Logs, temp, compressed, and intermediate files
