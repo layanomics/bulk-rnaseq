@@ -7,24 +7,23 @@ data/
 # Ignore all results except HTML reports from preprocessing
 01_preprocessing/results/*
 !01_preprocessing/results/**/*.html
+!01_preprocessing/results/.gitkeep
 
 # === STAR alignment outputs ===
 02_alignment/results/star_aligned/*.bam
 02_alignment/results/star_aligned/*.bai
 02_alignment/results/star_aligned/*Aligned.out.sam
 02_alignment/results/star_aligned/*Log.progress.out
+02_alignment/results/star_aligned/*
+!02_alignment/results/star_aligned/.gitkeep
 
 # === STAR genome index directory ===
 02_alignment/results/star_index/
+!02_alignment/results/star_index/.gitkeep
 
 # === Quantification Outputs ===
 03_quantification/results/*
-!03_quantification/results/FeatureCounts_Mod.txt # ✅ allow this one file
-
-# Keep empty result folders tracked
-!01_preprocessing/results/.gitkeep
-!02_alignment/results/star_aligned/.gitkeep
-!02_alignment/results/star_index/.gitkeep
+!03_quantification/results/FeatureCounts_Mod.txt
 !03_quantification/results/.gitkeep
 
 # Logs, temp, compressed, and intermediate files
@@ -42,6 +41,11 @@ data/
 .ipynb_checkpoints/
 .env
 
-# OS-specific
+# OS-specific files
 *.DS_Store
 Thumbs.db
+
+touch 01_preprocessing/results/.gitkeep
+touch 02_alignment/results/star_aligned/.gitkeep
+touch 02_alignment/results/star_index/.gitkeep
+touch 03_quantification/results/.gitkeep
