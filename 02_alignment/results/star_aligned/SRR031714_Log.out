@@ -2,50 +2,33 @@ STAR version=2.7.10b
 STAR compilation time,server,dir=2022-11-01T09:53:26-04:00 :/home/dobin/data/STAR/STARcode/STAR.master/source
 STAR git: On branch master ; commit c6f8efc2c7043ef83bf8b0d9bed36bbb6b9b1133 ; diff files: CHANGES.md 
 ##### Command Line:
-STAR --runThreadN 12 --genomeDir ../results/star_index --readFilesIn ../../01_preprocessing/results/fastp_cleaned/SRR031714_1_trimmed.fastq ../../01_preprocessing/results/fastp_cleaned/SRR031714_2_trimmed.fastq --readFilesCommand zcat --outFileNamePrefix ../results/star_aligned/SRR031714_ --outSAMtype BAM SortedByCoordinate
+STAR --runThreadN 12 --genomeDir ../results/star_index --readFilesIn ../../01_preprocessing/results/fastp_cleaned/SRR031714_1_trimmed.fastq ../../01_preprocessing/results/fastp_cleaned/SRR031714_2_trimmed.fastq --outFileNamePrefix ../results/star_aligned/SRR031714_ --outSAMtype BAM SortedByCoordinate --outSAMattrRGline ID:SRR031714 SM:SRR031714
 ##### Initial USER parameters from Command Line:
 outFileNamePrefix                 ../results/star_aligned/SRR031714_
 ###### All USER parameters from Command Line:
 runThreadN                    12     ~RE-DEFINED
 genomeDir                     ../results/star_index     ~RE-DEFINED
 readFilesIn                   ../../01_preprocessing/results/fastp_cleaned/SRR031714_1_trimmed.fastq   ../../01_preprocessing/results/fastp_cleaned/SRR031714_2_trimmed.fastq        ~RE-DEFINED
-readFilesCommand              zcat        ~RE-DEFINED
 outFileNamePrefix             ../results/star_aligned/SRR031714_     ~RE-DEFINED
 outSAMtype                    BAM   SortedByCoordinate        ~RE-DEFINED
+outSAMattrRGline              ID:SRR031714   SM:SRR031714        ~RE-DEFINED
 ##### Finished reading parameters from all sources
 
 ##### Final user re-defined parameters-----------------:
 runThreadN                        12
 genomeDir                         ../results/star_index
 readFilesIn                       ../../01_preprocessing/results/fastp_cleaned/SRR031714_1_trimmed.fastq   ../../01_preprocessing/results/fastp_cleaned/SRR031714_2_trimmed.fastq   
-readFilesCommand                  zcat   
 outFileNamePrefix                 ../results/star_aligned/SRR031714_
 outSAMtype                        BAM   SortedByCoordinate   
+outSAMattrRGline                  ID:SRR031714   SM:SRR031714   
 
 -------------------------------
 ##### Final effective command line:
-STAR   --runThreadN 12   --genomeDir ../results/star_index   --readFilesIn ../../01_preprocessing/results/fastp_cleaned/SRR031714_1_trimmed.fastq   ../../01_preprocessing/results/fastp_cleaned/SRR031714_2_trimmed.fastq      --readFilesCommand zcat      --outFileNamePrefix ../results/star_aligned/SRR031714_   --outSAMtype BAM   SortedByCoordinate   
+STAR   --runThreadN 12   --genomeDir ../results/star_index   --readFilesIn ../../01_preprocessing/results/fastp_cleaned/SRR031714_1_trimmed.fastq   ../../01_preprocessing/results/fastp_cleaned/SRR031714_2_trimmed.fastq      --outFileNamePrefix ../results/star_aligned/SRR031714_   --outSAMtype BAM   SortedByCoordinate      --outSAMattrRGline ID:SRR031714   SM:SRR031714   
 ----------------------------------------
 
 Number of fastq files for each mate = 1
-
-   Input read files for mate 1 :
--rw-r--r-- 1 layanomics layanomics 1081949928 Apr 19 18:33 ../../01_preprocessing/results/fastp_cleaned/SRR031714_1_trimmed.fastq
-
-   readsCommandsFile:
-exec > "../results/star_aligned/SRR031714__STARtmp/tmp.fifo.read1"
-echo FILE 0
-zcat      "../../01_preprocessing/results/fastp_cleaned/SRR031714_1_trimmed.fastq"
-
-
-   Input read files for mate 2 :
--rw-r--r-- 1 layanomics layanomics 1081949928 Apr 19 18:33 ../../01_preprocessing/results/fastp_cleaned/SRR031714_2_trimmed.fastq
-
-   readsCommandsFile:
-exec > "../results/star_aligned/SRR031714__STARtmp/tmp.fifo.read2"
-echo FILE 0
-zcat      "../../01_preprocessing/results/fastp_cleaned/SRR031714_2_trimmed.fastq"
-
+WARNING --outSAMattrRG defines a read group, therefore STAR will output RG attribute
 ParametersSolo: --soloCellFilterType CellRanger2.2 filtering parameters:  3000 0.99 10
 WARNING: --limitBAMsortRAM=0, will use genome size as RAM limit for BAM sorting
 Finished loading and checking parameters
@@ -1942,7 +1925,7 @@ Number of real (reference) chromosomes= 1870
 1869	211000022280427	564	626262016
 1870	211000022279089	544	626524160
 --sjdbOverhang = 100 taken from the generated genome
-Started loading the genome: Sun Apr 20 23:03:31 2025
+Started loading the genome: Tue Apr 22 20:51:30 2025
 
 Genome: size given as a parameter = 638948412
 SA: size given as a parameter = 1276065651
@@ -1956,37 +1939,83 @@ Loading Genome ... done! state: good=1 eof=0 fail=0 bad=0; loaded 638948412 byte
 SA file size: 1276065651 bytes; state: good=1 eof=0 fail=0 bad=0
 Loading SA ... done! state: good=1 eof=0 fail=0 bad=0; loaded 1276065651 bytes
 Loading SAindex ... done: 1565873619 bytes
-Finished loading the genome: Sun Apr 20 23:03:34 2025
+Finished loading the genome: Tue Apr 22 20:51:51 2025
 
 Processing splice junctions database sjdbN=60508,   pGe.sjdbOverhang=100 
 alignIntronMax=alignMatesGapMax=0, the max intron size will be approximately determined by (2^winBinNbits)*winAnchorDistNbins=589824
 Created thread # 1
-Starting to map file # 0
-mate 1:   ../../01_preprocessing/results/fastp_cleaned/SRR031714_1_trimmed.fastq
-mate 2:   ../../01_preprocessing/results/fastp_cleaned/SRR031714_2_trimmed.fastq
-Thread #1 end of input stream, nextChar=-1
 Created thread # 2
 Created thread # 3
 Created thread # 4
 Created thread # 5
 Created thread # 6
-Completed: thread #6
-Completed: thread #2
-Completed: thread #1
-Completed: thread #3
-Completed: thread #4
-Completed: thread #5
 Created thread # 7
-Completed: thread #7
 Created thread # 8
-Completed: thread #8
 Created thread # 9
-Completed: thread #9
 Created thread # 10
-Completed: thread #10
 Created thread # 11
-Completed: thread #11
+BAM sorting: 325216 mapped reads
+BAM sorting bins genomic start loci:
+1	0	3067871
+2	0	5984212
+3	0	8176659
+4	0	10203462
+5	0	13772182
+6	0	19554244
+7	0	22534975
+8	1	5329213
+9	1	8128834
+10	1	11855585
+11	1	12919814
+12	1	15932305
+13	1	18282742
+14	1	21637704
+15	1	24576663
+16	2	1572180
+17	2	3153327
+18	2	5118899
+19	2	8601793
+20	2	13265271
+21	2	16857472
+22	2	22076657
+23	3	4404926
+24	3	8261196
+25	3	11210517
+26	3	14372681
+27	3	17677616
+28	3	22619217
+29	3	26869404
+30	3	29126990
+31	3	30824399
+32	5	433362
+33	5	3428608
+34	5	6532183
+35	5	8906045
+36	5	11879278
+37	5	15719590
+38	5	18496793
+39	5	23206004
+40	5	23281178
+41	6	863071
+42	11	38427
+43	11	47899
+44	11	57043
+45	11	68875
+46	11	73737
+47	529	1243
+48	1224	925
+Thread #2 end of input stream, nextChar=-1
 Completed: thread #0
+Completed: thread #3
+Completed: thread #6
+Completed: thread #9
+Completed: thread #2
+Completed: thread #5
+Completed: thread #4
+Completed: thread #7
+Completed: thread #11
+Completed: thread #10
+Completed: thread #1
 Joined thread # 1
 Joined thread # 2
 Joined thread # 3
@@ -1994,16 +2023,16 @@ Joined thread # 4
 Joined thread # 5
 Joined thread # 6
 Joined thread # 7
+Completed: thread #8
 Joined thread # 8
 Joined thread # 9
 Joined thread # 10
 Joined thread # 11
-Apr 20 23:03:35 ..... finished mapping
+Apr 22 20:55:24 ..... finished mapping
 RAM after mapping:
-VmPeak:	 5444664 kB; VmSize:	 5321756 kB; VmHWM:	 4609704 kB; VmRSS:	 4609648 kB; 
+VmPeak:	 6130312 kB; VmSize:	 5978640 kB; VmHWM:	 5231968 kB; VmRSS:	 5196096 kB; 
 RAM after freeing genome index memory:
-VmPeak:	 5444664 kB; VmSize:	 1922444 kB; VmHWM:	 4609704 kB; VmRSS:	 1210348 kB; 
-Apr 20 23:03:35 ..... started sorting BAM
-Max memory needed for sorting = 0
-WARNING: nothing to sort - no output alignments
+VmPeak:	 6130312 kB; VmSize:	 2579328 kB; VmHWM:	 5231968 kB; VmRSS:	 1796888 kB; 
+Apr 22 20:55:24 ..... started sorting BAM
+Max memory needed for sorting = 45204469
 ALL DONE!

@@ -17,9 +17,9 @@ for R1 in "${INPUT_DIR}"/*_1_trimmed.fastq; do
         STAR --runThreadN "$THREADS" \
             --genomeDir "$INDEX_DIR" \
             --readFilesIn "$R1" "$R2" \
-            --readFilesCommand zcat \
             --outFileNamePrefix "${ALIGN_OUT_DIR}/${SAMPLE}_" \
-            --outSAMtype BAM SortedByCoordinate
+            --outSAMtype BAM SortedByCoordinate \
+            --outSAMattrRGline ID:"${SAMPLE}" SM:"${SAMPLE}"
 
         echo "✅ Finished $SAMPLE"
     else

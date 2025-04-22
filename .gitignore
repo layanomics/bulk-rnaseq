@@ -1,21 +1,12 @@
-# Ignore all results except HTML reports from preprocessing
-01_preprocessing/results/*
-!01_preprocessing/results/**/*.html
+# VS Code config
+.vscode/
 
 # Ignore raw and reference data
 data/
 
-# Ignore logs, JSON, fastq, zip, and temp files
-*.json
-*.zip
-*.fastq
-*.log
-*.tmp
-
-# System and editor files
-.env
-*.DS_Store
-.ipynb_checkpoints/
+# Ignore all results except HTML reports from preprocessing
+01_preprocessing/results/*
+!01_preprocessing/results/**/*.html
 
 # === STAR alignment outputs ===
 02_alignment/results/star_aligned/*.bam
@@ -25,3 +16,35 @@ data/
 
 # === STAR genome index directory ===
 02_alignment/results/star_index/
+
+# === Quantification Outputs ===
+03_quantification/results/*.txt
+03_quantification/results/*.summary
+03_quantification/results/*.mod.txt
+03_quantification/results/*.counts
+03_quantification/results/*.csv
+
+# Keep empty result folders tracked
+!01_preprocessing/results/.gitkeep
+!02_alignment/results/star_aligned/.gitkeep
+!02_alignment/results/star_index/.gitkeep
+!03_quantification/results/.gitkeep
+
+# Logs, temp, compressed, and intermediate files
+*.log
+*.tmp
+*.zip
+*.json
+*.fastq
+*.fastq.gz
+*.out
+*.err
+*.bak
+
+# Jupyter and environment files
+.ipynb_checkpoints/
+.env
+
+# OS-specific
+*.DS_Store
+Thumbs.db
