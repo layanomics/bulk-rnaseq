@@ -16,3 +16,12 @@ data/
 .env
 *.DS_Store
 .ipynb_checkpoints/
+
+# === STAR alignment outputs ===
+02_alignment/results/star_aligned/*.bam
+02_alignment/results/star_aligned/*.bai
+02_alignment/results/star_aligned/*Aligned.out.sam
+02_alignment/results/star_aligned/*Log.progress.out
+
+# === STAR genome index directory ===
+02_alignment/results/star_index/
